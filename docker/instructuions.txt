@@ -1,0 +1,14 @@
+
+To build the docker image
+---
+
+From inside of this directory
+
+Run:
+
+docker build -t aisc_2020_gnn_b_dc_container .
+
+
+To run the container
+---
+docker run -it --name aisc_2020_gnn_b_dc_container -p 5000:5000 --rm iris_flask_cont
