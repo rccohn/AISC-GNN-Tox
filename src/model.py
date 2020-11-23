@@ -19,6 +19,8 @@ def predict(X, model):
 
     """
     # TODO do we need any pre-processing steps for x?
+    print('mlflow predict X')
+    print(X)
     y = model.predict(X)
     y = labels.inverse_transform(y)
     return y

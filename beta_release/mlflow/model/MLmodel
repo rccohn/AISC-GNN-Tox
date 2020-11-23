@@ -1,0 +1,16 @@
+flavors:
+  python_function:
+    artifacts:
+      metadata:
+        path: artifacts/metadata.txt
+        uri: ../metadata.txt
+      model_files:
+        path: artifacts/.
+        uri: model_fit/content/model_fit/
+    cloudpickle_version: 1.6.0
+    code: code
+    env: conda.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.6.12
+utc_time_created: '2020-11-23 03:18:06.164942'

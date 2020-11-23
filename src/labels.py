@@ -1,6 +1,6 @@
 from pathlib import Path
 with open(Path(__file__).parent /'tox21_categories.txt', 'r') as f:
-    data = [x.replace('\n','') for x in f.readlines()[1:]]
+    data = [x.replace('\n', '') for x in f.readlines()[1:]]
 
 labels = {0: 'inactive', 1: 'active'}
 
