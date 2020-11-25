@@ -31,12 +31,11 @@ ENV PATH /root/miniconda/bin:$PATH
 #COPY ./api /root
 
 # Create a conda environment from the specified conda.yaml
-COPY ./dc_env.yml /root/dc_env.yml
-RUN conda env create --file /root/dc_env.yml
-RUN /root/miniconda/envs/dc_env/bin/pip install pip install torch==1.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
-RUN /root/miniconda/envs/dc_env/bin/pip install git+https://github.com/deepchem/deepchem
+COPY ./dc_env_docker.yml /root/dc_env_docker.yml
+RUN conda env create --file /root/dc_env_docker.yml
+RUN /root/miniconda/envs/dc_env_docker/bin/pip install git+https://github.com/deepchem/deepchem
 
-RUN echo "source activate dc_env" >> .bashrc
+RUN echo "source activate dc_env_docker" >> .bashrc
 
 
 

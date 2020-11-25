@@ -4,6 +4,7 @@ with open(Path(__file__).parent /'tox21_categories.txt', 'r') as f:
 
 labels = {0: 'inactive', 1: 'active'}
 
+
 def inverse_transform(y, data=data, labels=labels):
     """
     Convert vector of predictions y into human readable labels

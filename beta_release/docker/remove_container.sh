@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker rmi test_03
+sudo docker rmi --force test_03
