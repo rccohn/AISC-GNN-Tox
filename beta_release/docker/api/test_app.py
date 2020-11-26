@@ -7,7 +7,7 @@ print("home:")
 print(requests.get(host1).text)
 
 import pickle
-with open('../test_data_gnn.pickle', 'rb') as f:
+with open('../../test_data_gnn.pickle', 'rb') as f:
     test_data = pickle.load(f)
 
 test_x = {'data': test_data}

@@ -1,5 +1,6 @@
-*.pickle # pickle files too large for github.
-*.pkl
+#pickle files too big for github
+**/*.pickle
+**/*.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

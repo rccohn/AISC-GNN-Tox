@@ -8,10 +8,10 @@ import src
 app = Flask(__name__)
 
 # Load in the model at app startup
-model = mlflow.pyfunc.load_model('../mlflow_root/model')
+model = mlflow.pyfunc.load_model('/root/api/mlflow_root/model')
 
 # Load in our meta_data
-with open("../mlflow_root/model/artifacts/metadata.txt", "r") as f:
+with open("/root/api/mlflow_root/model/artifacts/metadata.txt", "r") as f:
     load_meta_data = json.loads(f.read())
 
 # Meta data endpoint

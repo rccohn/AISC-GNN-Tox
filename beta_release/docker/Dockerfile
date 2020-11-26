@@ -31,9 +31,11 @@ ENV PATH /root/miniconda/bin:$PATH
 #COPY ./api /root
 
 # Create a conda environment from the specified conda.yaml
-COPY ./dc_env_docker.yml /root/dc_env_docker.yml
+COPY dc_env_docker.yml /root/dc_env_docker.yml
 RUN conda env create --file /root/dc_env_docker.yml
 RUN /root/miniconda/envs/dc_env_docker/bin/pip install git+https://github.com/deepchem/deepchem
+ 
+
 
 RUN echo "source activate dc_env_docker" >> .bashrc
 
