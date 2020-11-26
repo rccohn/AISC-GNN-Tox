@@ -3,7 +3,6 @@
 
 pip install requests
 pip install tensorflow==1.14
-pip install torch==1.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 pip install --upgrade tensorboard
 conda install -y -c conda-forge rdkit

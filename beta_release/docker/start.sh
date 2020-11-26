@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bash 
+python /root/api/app.py

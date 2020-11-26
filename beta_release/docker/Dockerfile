@@ -37,7 +37,7 @@ RUN /root/miniconda/envs/dc_env_docker/bin/pip install git+https://github.com/de
 
 RUN echo "source activate dc_env_docker" >> .bashrc
 
-
+COPY ./api /root/api
 
 COPY ./start.sh /root
 

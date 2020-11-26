@@ -1,0 +1,13 @@
+# subchallenges 1-12 from: https://tripod.nih.gov/tox21/challenge/
+estrogen receptor alpha, LBD (ER, LBD)
+estrogen receptor alpha, full (ER, full)
+aromatase
+aryl hydrocarbon receptor (AhR)
+androgen receptor, full (AR, full)
+androgen receptor, LBD (AR, LBD)
+peroxisome proliferator-activated receptor gamma (PPAR-gamma)
+nuclear factor (erythroid-derived 2)-like 2/antioxidant responsive element (Nrf2/ARE)
+heat shock factor response element (HSE)
+ATAD5
+mitochondrial membrane potential (MMP)
+p53
