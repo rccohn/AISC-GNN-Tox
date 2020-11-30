@@ -1,6 +1,7 @@
 import deepchem as dc
 import pandas as pd
 import numpy as np
+import json
 
 
 def convmol_to_dict(x):
@@ -55,3 +56,37 @@ def json_dict_to_dict(j):
 
 def dict_to_dataframe(d):
     return pd.DataFrame(d)
+
+
+def data_to_json(ds):
+    data_dict = dataset_to_dict(ds)
+    jd = json_dict(data_dict)
+    return jd
+
+def format_request(data):
+    return json.dumps({'data': data})
+
+
+def response_to_csv(response, ids, outfile):
+    """
+    :param response: result from response from flask
+    :param ids: list of string names of molecules (SMILES)
+    :param outfile: path to file to write data
+    :return:
+    """
+    response_list = json.loads(response.text)
+    tasks = [x.split(':')[0] for x in response_list[0]]
+
+    decoder = {' inactive': 0, ' active': 1}
+    responses = np.asarray([[decoder[x.split(':')[1]] for x in y]
+                            for y in response_list])
+    df = pd.DataFrame(dict(zip(tasks, responses.T)))
+
+    cols = ['ids', *df.columns]
+    df['ids'] = ids
+
+    df = df[cols]
+    df.set_index('ids')
+
+    df.to_csv(outfile)
+
