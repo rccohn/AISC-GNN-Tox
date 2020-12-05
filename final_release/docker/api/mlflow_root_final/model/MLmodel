@@ -1,0 +1,16 @@
+flavors:
+  python_function:
+    artifacts:
+      metadata:
+        path: artifacts/metadata.txt
+        uri: ../metadata.txt
+      model_files:
+        path: artifacts/.
+        uri: ../gnn_model/
+    cloudpickle_version: 1.6.0
+    code: code
+    env: conda.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.6.9
+utc_time_created: '2020-12-05 21:26:31.019303'
