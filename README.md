@@ -24,7 +24,7 @@ Note that in order to access the Flask app inside the container, port 5000 must 
 
 ## Conda Environment
 To run the app directly through python, first configure the environment using `conda.`
-1. Install base environment located in 'final_release/docker/dc_env_docker.yml': 
+1. Install base environment located in `final_release/docker/dc_env_docker.yml`: 
 ```bash
 conda env create --file <path/to/AISC-GNN-Tox>/dc_env_docker.yml
 ```
@@ -61,7 +61,7 @@ Cc1nnc(-c2ccccc2)c(=O)n1N
 Here, you will be able to select and upload your file. Immediately after uploading, the file will be processed and you will be prompted to download the results, which will be available as a CSV. The first two columns of the CSV are the index (integer) and SMILES encoding of the molecule. The next 12 columns correspond to the 12 pathways of interest (labeled in the header.) An entry of 1 indicates that the molecule is predicted to be active in the pathway, and an entry of 0 indicates it is predicted to not be active.
 
 ## Access the model via POST request.
-If you would like to automate the process, you can also access the app through http requests. POST requests can be sent to `localhost:5000/predict`. The request must be formatted as a JSON entry with the following format: {"data": ["<SMILES-molecule-1>","<SMILES-molecule-2>",etc]} A simple way to do this in Python is shown below.
+If you would like to automate the process, you can also access the app through http requests. POST requests can be sent to `localhost:5000/predict`. The request must be formatted as a JSON entry with the following format: `{"data": ["<SMILES-molecule-1>","<SMILES-molecule-2>",etc]}` A simple way to do this in Python is shown below.
 
 ```python3
 import json
